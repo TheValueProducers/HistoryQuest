@@ -1,0 +1,474 @@
+/* global */
+:root {
+  --width: min(1200px, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  user-select: none;
+  text-decoration: none !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "TrixiProRegular", sans-serif !important;
+  background-image: url("../images/home-backGround.png");
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  color: #606060;
+}
+
+/* backGroundContainer */
+.vienTren {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.backGround {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.vongNgoaiCung {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/background3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Header */
+header {
+  width: var(--width);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-inline: 20px;
+  padding-block: 3vh;
+  font-family: "1FTV-HF-Gesco";
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.list-links {
+  padding-right: 2rem;
+}
+
+header .logo img {
+  width: 7vw;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2em;
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    a {
+      transition: all 0.5s;
+      color: inherit;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  li:hover {
+    border-bottom: 1px solid #fff;
+
+    a {
+      font-size: 1.1rem;
+      color: aqua;
+    }
+  }
+}
+
+header nav ul li.active {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+/* timeLine  */
+
+.timeLineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 150px;
+  width: 90%;
+  margin: auto;
+  overflow-x: auto;
+
+  .timeLineWrapper {
+    width: 100%;
+  }
+
+  .timeLine {
+    height: 0;
+    width: 200%;
+    border-top: 1px dotted #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 5vh;
+
+    .timeLine-item {
+      width: 2vh;
+      height: 2vh;
+      border-radius: 50%;
+      background-color: #606060;
+      position: relative;
+
+      .timeLine-item-content {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 15vh;
+        text-wrap: wrap;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.5s;
+        color: #fff;
+        font-family: "UTM Avo";
+      }
+
+      .timeLine-item-content:hover {
+        color: #d34936;
+        font-size: 1.1rem;
+      }
+    }
+
+    .timeLine-item.active {
+      background-color: #d34936;
+
+      .timeLine-item-content {
+        color: #d34936;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.timeLine_textC {
+  h3 {
+    font-size: 2.5vw;
+    color: #d34936;
+  }
+
+  p {
+    color: #fff;
+    font-size: 1vw;
+    text-overflow: ellipsis;
+    font-family: "UTM-Avo";
+  }
+}
+
+/* content */
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 20%;
+  grid-template-rows: 1fr;
+
+  .item1 {
+    grid-column: 1/2;
+    background-color: #ffffff;
+    font-family: "UTM-Avo";
+    z-index: 1;
+
+    .thoiKy {
+      height: 10vw;
+      overflow: hidden;
+    }
+
+    .thoiKy-img {
+      img {
+        width: 10vw;
+        height: 10vw;
+        object-fit: cover;
+      }
+    }
+
+    .thoiKy-content {
+      h4 {
+        a {
+          color: #d34936;
+          font-family: "1FTV HF Gesco";
+          font-size: 1.5vw;
+          font-weight: 400;
+        }
+      }
+
+      p {
+        font-size: 1vw;
+      }
+
+      .thoiKy-content-text {
+        font-size: 0.9vw;
+        font-family: "UTM-Avo";
+      }
+
+      .limited-lines {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .item2 {
+    grid-column: 2/3;
+    z-index: 1;
+
+    .itemTitle {
+      background-color: rgba(0, 0, 0, 0.5);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-inline: 2vw;
+      padding-block: 3vh;
+      font-size: 1vw;
+      font-weight: 600;
+      text-transform: capitalize;
+      font-family: "UTM-Avo";
+    }
+
+    > .itemTitle {
+      background-color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .menuItem {
+      border-bottom: 1px solid rgba(68, 68, 68, 0.5);
+      transition: all 0.6s;
+    }
+
+    .menuItem:hover {
+      background-color: #d34936;
+      color: #fff;
+    }
+  }
+}
+
+/* footer */
+footer {
+  font-family: "UTM-Avo";
+  color: #d4d5d9;
+
+  img {
+    width: 17vw;
+  }
+
+  .footer-content {
+    .copyrightText {
+      font-size: 0.7vw;
+    }
+
+    .footer-link {
+      margin-bottom: 9vh;
+
+      a {
+        text-decoration: none;
+        color: #d4d5d9;
+      }
+    }
+
+    .footer-title {
+      font-size: 0.75vw;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #898a8d;
+    }
+
+    .footer-info {
+      font-size: 1.2vw;
+    }
+  }
+}
+
+/* navigation-container */
+.navigation-container {
+  width: var(--width);
+
+  .center-content {
+    width: 60%;
+
+    p {
+      font-size: 1.2vw;
+      font-family: "1FTV-HF-Gesco";
+      color: #4d4d4d;
+      transition: all 0.5s;
+      text-align: center;
+    }
+
+    .center-content-text {
+      p {
+        font-size: 1.6vw;
+        font-family: "1FTV-HF-Gesco";
+        color: #fff;
+        font-weight: '400';
+      }
+    }
+  }
+
+  .left-content,
+  .right-content {
+    width: 20%;
+
+    p {
+      font-size: 1.2vw;
+      font-family: "1FTV-HF-Gesco";
+      color: #4d4d4d;
+      transition: all 0.5s;
+    }
+
+    p:hover {
+      color: #d34936;
+    }
+  }
+}
+
+.menu-left {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  max-height: 70vh;
+  overflow: scroll;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    p {
+      color: #858585;
+      font-size: 1.1vw;
+      font-family: "UTM-Avo";
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.5s;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      column-gap: 2.5vw;
+      padding-block: 1.2vh;
+      padding-inline: 2vw;
+      transition: all 0.5s;
+
+      p {
+        font-size: 1.1vw;
+      }
+      span {
+        font-size: 0.8vw;
+      }
+    }
+
+    li:hover {
+      color: #fff;
+      p {
+        color: #fff;
+        font-size: 1.15vw;
+      }
+    }
+
+    li.active {
+      color: #fff;
+
+      p {
+        color: #fff;
+        font-size: 1.15vw;
+      }
+    }
+  }
+}
+
+.navigation-container-title {
+  color: #000;
+  font-size: 1.5vw;
+  background-color: #fff;
+  text-align: start;
+  font-family: "TrixiProRegular";
+  padding-block: 1vh;
+  padding-left: 2vw;
+}
+
+.text-content-right {
+  font-family: "UTM-Avo";
+  font-size: 0.9vw;
+  max-height: 77vh;
+  overflow: scroll;
+  img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 2vh;
+  }
+  a.btn-chiTiet {
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-family: "TrixiProRegular";
+    font-weight: 600;
+    color: #fff;
+    background-color: black;
+    padding-inline: 1vw;
+    padding-block: 1vh;
+    text-decoration: none;
+  }
+}
+
+/* backToTop */
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out {
+  opacity: 0.5;
+}

@@ -1,0 +1,559 @@
+/* global */
+:root {
+  --width: min(1200px, 100%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'TrixiProRegular', sans-serif;
+  background-image: url('../images/home-backGround.png');
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  color: #606060;
+}
+
+/* backGroundContainer */
+.vienTren {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.backGround {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 57.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trongDong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+  height: 30vh;
+}
+
+.trongDong-inner {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/backGround1.png');
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: trongXoay 10s linear infinite;
+}
+
+@keyframes trongXoay {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.vienTrong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../images/backGround2.png');
+  width: 32vh;
+  height: 32vh;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.haoQuangSuViet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  background-image: url(../images/haoQuangSuViet.svg);
+  width: 40vh;
+  height: 40vh;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.groupCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/groupCircle.svg);
+  width: 60vh;
+  height: 60vh;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1000;
+}
+
+.vongNgoaiCung {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/background3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vongLichSu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vh;
+  height: 60vh;
+}
+
+.timeline-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  transform: rotate(-90deg);
+  margin: 0;
+  padding: 0;
+}
+
+.milestone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-wrap: wrap;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.linkLs {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Đặt góc xoay cho từng mốc thời gian */
+.hong-bang {
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 100.5%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -7vh;
+    left: -4vw;
+  }
+}
+
+.an-duong-vuong {
+  position: absolute;
+  top: 82.5%;
+  left: 88%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -5vh;
+    left: -2vw;
+  }
+}
+
+.nha-trieu {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -4vh;
+    left: -2.5vw;
+  }
+}
+
+.bac-thuoc {
+  position: absolute;
+  top: 95%;
+  left: 71%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -3vh;
+    left: -2.5vw;
+  }
+}
+
+.nha-ngo {
+  position: absolute;
+  top: 70%;
+  left: 5.5%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: 2vh;
+    left: -2.5vw;
+  }
+}
+
+.nha-dinh {
+  position: absolute;
+  top: 55%;
+  left: 1.5%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: 3vh;
+    left: -6.5vw;
+  }
+}
+
+.nha-ly {
+  position: absolute;
+  top: 43%;
+  left: 2%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: 3vh;
+    left: -10.5vw;
+  }
+}
+
+.nha-tran {
+  position: absolute;
+  top: 22%;
+  left: 10%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: 2.5vh;
+    left: -10.5vw;
+  }
+}
+
+.nha-ho {
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: 1.5vh;
+    left: -11.5vw;
+  }
+}
+
+.thuoc-minh {
+  position: absolute;
+  top: 2%;
+  left: 40%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -1.5vh;
+    left: -12.5vw;
+  }
+}
+
+.hau-le {
+  position: absolute;
+  top: 0.5%;
+  left: 55%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -2vh;
+    left: -12.5vw;
+  }
+}
+
+.nha-nguyen {
+  position: absolute;
+  top: 4%;
+  left: 70%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -2vh;
+    left: -12.5vw;
+  }
+
+}
+
+.phap-thuoc {
+  position: absolute;
+  top: 12%;
+  left: 82%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -2vh;
+    left: -13vw;
+  }
+}
+
+.chong-my {
+  position: absolute;
+  top: 22%;
+  left: 92%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -3vh;
+    left: -14.5vw;
+  }
+}
+
+.xa-hoi-chu-nghia {
+  position: absolute;
+  top: 35%;
+  left: 98%;
+  transform: rotate(0deg) translate(-75%, -50%) rotate(90deg);
+
+  div {
+    position: absolute;
+    top: -5vh;
+    left: -12vw;
+  }
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5vw;
+  width: 15vw;
+
+  img {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    overflow: hidden;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    object-position: center;
+    transition: all .5s;
+  }
+
+  p {
+    color: #fff;
+    font-size: 0.8vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: all .5s;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.milestone:hover img {
+  border: 2px solid #fff;
+  width: 5.5vh;
+  height: 5.5vh;
+}
+
+.milestone:hover p {
+  font-size: 0.9vw;
+}
+
+.milestone:hover+* {
+  img {
+    width: 5.1vh;
+    height: 5.1vh;
+  }
+
+  p {
+    font-size: 0.82vw;
+  }
+}
+
+.milestone:has(+ * :hover) {
+  img {
+    width: 5.1vh;
+    height: 5.1vh;
+  }
+
+  p {
+    font-size: 0.82vw;
+  }
+}
+
+.decor {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  width: 18vw;
+  z-index: -1;
+
+  img {
+    width: 100%;
+    mix-blend-mode: darken;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+/* Header */
+header {
+  width: var(--width);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-inline: 20px;
+  padding-block: 3vh;
+  font-family: '1FTV-HF-Gesco';
+}
+
+header .logo img {
+  width: 7vw;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2em;
+  list-style-type: none;
+
+  li {
+    a {
+      transition: all .5s;
+      color: inherit;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  li:hover {
+    border-bottom: 1px solid #fff;
+
+    a {
+      font-size: 1.1rem;
+      color: aqua;
+    }
+  }
+}
+
+header nav ul li.active {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.customModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: scroll;
+  scrollbar-width: none;
+  img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    padding-block: 2vh;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
